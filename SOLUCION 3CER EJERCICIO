@@ -1,0 +1,21 @@
+import math
+
+vector_x=int(input("ingrese el valor del vector en X: "))
+vector_y=int(input("ingrese el valor del vector en Y: "))
+vector_z=int(input("ingrese el valor del vector en Z: "))
+angulo_en_x=int(input("ingrese el angulo del vector x: "))
+angulo_en_y=int(input("ingrese el angulo del vector y: "))
+angulo_en_z=int(input("ingrese el angulo del vector z: "))
+def componente_vector(vector_x,vector_y,vector_z):
+    componentx=vector_x*(math.cos(angulo_en_x))
+    componenty=vector_y*(math.cos(angulo_en_y))
+    componentz=vector_z*(math.cos(angulo_en_z))
+    return componentx,componenty,componentz
+def component_vector(vector_x,vector_y,vector_z):
+    componenTX=(vector_x*math.sin(angulo_en_x))
+    componenTY=(vector_y*math.sin(angulo_en_y))
+    componenTZ=(vector_z*math.sin(angulo_en_z))
+
+    return componenTX,componenTZ,componenTY
+print((componente_vector(vector_x,vector_y,vector_z)),"con respecto al eje X")
+print((component_vector(vector_x,vector_y,vector_z)),"con respecto al eje Y")
