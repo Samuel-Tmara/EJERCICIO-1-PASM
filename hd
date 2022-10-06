@@ -1,0 +1,46 @@
+class persona:
+    def _init_(self, nombre):
+        self.nombre() # Nombre de la persona
+        self.hermanos() # hermanos de la persona (n datos)
+        self.padres() # padres de la persona (2 datos o menos)
+
+    def agregar_padres(self.persona,name):
+        if name < persona.nombre:
+            if persona.hermano is None:
+                persona.padres = persona(name)
+
+        else:
+            self.agregar_padres(persona.hermano,name)
+    else:
+        if name.padres is None:
+            name.padre = persona(name)
+        else:
+            self.agregar_padres(persona.padres,name)
+
+    def me_casare_con_su_hija(self, persona):
+        if persona is not None:
+            self.me_casare_con_su_hija(persona.hermano)
+            print(persona.nombre, end=", ")
+            self.me_casare_con_su_hija(persona.padres)
+
+    def hola_guapó_vine_por_tu_hija(self, persona):
+        if persona is not None:
+            print(persona.nombre, end=", ")
+            self.la_guapó_vine_por_tu_hija(persona.izquierda)
+            self.la_guapó_vine_por_tu_hija(persona.derecha)
+
+    def quee(self, persona):
+        if persona is not None:
+            self.quee(persona.hermano)
+            self.quee(persona.padres)
+            print(persona.nombre, end=", ")
+
+    def buscar(self, nodo, busqueda):
+        if persona is None:
+            return None
+        if persona.nombre == busqueda:
+            return nodo
+        if busqueda < persona.nombre:
+            return self.buscar(persona.hermanos, busqueda)
+        else:
+            return self.buscar(persona.padres, busqueda)
