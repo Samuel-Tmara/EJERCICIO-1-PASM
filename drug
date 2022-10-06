@@ -1,0 +1,32 @@
+#INDUSTRIALIZADORA DE BARETOS
+class baretos:
+
+    tamaño="ñurido"
+    precio=1000
+    exotico=False
+    color_cuero="blanco"
+    pega_duro= False
+
+
+    def __init__(self,tierruda,lugar_compra,gigantecomomivrga):
+        self.tierruda=tierruda
+        self.lugar_compra=lugar_compra
+        self.tamaño=gigantecomomivrga
+    def donde_la_compro(self,lugar_compra):
+        return "la compre en {}".format(lugar_compra)
+
+    def tamanin(self,gigantecomomivrga):
+        return  "el tamaño del bareto es de {}".format(gigantecomomivrga)
+
+
+exotico= baretos(False,"en el barrio","20 cm")
+exotico.color_cuero="blonjairo"
+print(exotico.color_cuero)
+exotico=baretos(False,"en el barrio","gigante")
+exotico.tamaño="20 centimetros gonorreaaa"
+print(exotico.tamanin("20 centimetros "))
+print(exotico.lugar_compra)
+print(exotico.color_cuero)
+print(exotico.pega_duro)
+print(exotico.precio)
+print(exotico.tierruda)
